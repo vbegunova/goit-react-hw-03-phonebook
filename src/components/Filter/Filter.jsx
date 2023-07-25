@@ -1,4 +1,5 @@
-import { Container } from "./Filter.styled";
+import PropTypes from 'prop-types';
+import { Container } from './Filter.styled';
 
 const Filter = ({ filter, handleChange }) => (
   <Container>
@@ -12,5 +13,10 @@ const Filter = ({ filter, handleChange }) => (
     />
   </Container>
 );
+
+Filter.propTypes = {
+  filter: PropTypes.string.isRequired,
+  handleChange: PropTypes.func.isRequired,
+};
 
 export default Filter;
